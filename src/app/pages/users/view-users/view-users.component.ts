@@ -118,13 +118,13 @@ export class ViewUsersComponent implements AfterViewInit, OnInit, OnDestroy {
 
   deleteUser(id: number) {
     Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: 'Esta seguro?',
+      text: 'Esto no se podra revertir!',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
+      confirmButtonText: 'Si, eliminar!',
     }).then((result: any) => {
       if (result.isConfirmed) {
         this.userStore.dispatch(userApiActions.deletUser({ id }));
@@ -132,7 +132,7 @@ export class ViewUsersComponent implements AfterViewInit, OnInit, OnDestroy {
           this.loadUserPage();
         }, 500);
       } else {
-        Swal.fire('Cancelled', 'the user is safe', 'error');
+        Swal.fire('Cancelled', 'the user is safe', 'info');
       }
     });
   }
