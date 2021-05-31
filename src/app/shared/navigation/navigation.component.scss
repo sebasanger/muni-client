@@ -1,0 +1,97 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  border: none;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.item-selected {
+  background: rgba(233, 30, 99, 0.15);
+  color: #f492b4;
+}
+
+.menu-icon {
+  padding-bottom: 4.5px;
+  padding-right: 4px;
+}
+
+.config-list {
+  margin-bottom: 5px;
+}
+
+.progressbar {
+  padding-top: 15px;
+}
+
+.loader {
+  position: absolute;
+  width: 100%;
+}
+
+.user-avatar {
+  width: 50px;
+  border-radius: 30%;
+  height: 40px;
+}
+
+.user-menu {
+  margin-right: 10px;
+  margin-left: 5px;
+  width: 50px;
+  border-radius: 30%;
+  height: 40px;
+}
+
+.title {
+  margin-right: 5px;
+  cursor: pointer;
+
+  @media (max-width: 640px) {
+    display: none;
+  }
+}
+
+.user-fullname {
+  @media (max-width: 640px) {
+    display: none;
+  }
+}
+
+#principal {
+  padding: 30px;
+}
+
+
+
+.selectors {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.easter-egg {
+  display: none;
+
+  @media (width: 888px) {
+    display: block;
+
+  }
+}
+
+.easter-egg mat-icon {
+  padding: 3px;
+}
