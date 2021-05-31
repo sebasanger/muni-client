@@ -56,38 +56,6 @@ export class NavigationComponent implements OnInit {
           path: '../pages/dashboard',
         },
         {
-          title: this.translate.instant('MENU.STAYS'),
-          icon: 'event',
-          path: '../pages/stays',
-        },
-        {
-          title: this.translate.instant('MENU.CUSTOMERS'),
-          icon: 'groups',
-          path: '../pages/customers',
-        },
-        {
-          title: this.translate.instant('MENU.ROOMS'),
-          icon: 'meeting_room',
-          path: '../pages/rooms',
-        },
-
-        {
-          title: this.translate.instant('MENU.REGISTERS'),
-          icon: 'point_of_sale',
-          path: '../pages/registers',
-        },
-
-        {
-          title: this.translate.instant('MENU.CONSUMPTIONS'),
-          icon: 'shopping_cart',
-          path: '../pages/consumptions',
-        },
-        {
-          title: this.translate.instant('MENU.PAYMENTS'),
-          icon: 'attach_money',
-          path: '../pages/payments',
-        },
-        {
           title: this.translate.instant('MENU.CHARTS'),
           icon: 'analytics',
           path: '../pages/charts',
@@ -96,9 +64,9 @@ export class NavigationComponent implements OnInit {
 
       if (this.user.roles.includes('ADMIN')) {
         this.menuItems.push({
-          title: this.translate.instant('MENU.PRODUCTS'),
-          icon: 'inventory_2',
-          path: '../pages/products',
+          title: this.translate.instant('MENU.USERS'),
+          icon: 'people',
+          path: '../pages/users',
         });
 
         this.adminMenuItems = [
@@ -106,41 +74,6 @@ export class NavigationComponent implements OnInit {
             title: this.translate.instant('MENU.USERS'),
             icon: 'people',
             path: '../pages/users',
-          },
-          {
-            title: this.translate.instant('MENU.REASON'),
-            icon: 'api',
-            path: '../pages/administration/reasons',
-          },
-          {
-            title: this.translate.instant('MENU.CATEGORY'),
-            icon: 'receipt',
-            path: '../pages/administration/categories',
-          },
-          {
-            title: this.translate.instant('MENU.BRAND'),
-            icon: 'bookmarks',
-            path: '../pages/administration/brands',
-          },
-          {
-            title: this.translate.instant('MENU.INVOICE'),
-            icon: 'article',
-            path: '../pages/administration/invoices',
-          },
-          {
-            title: this.translate.instant('MENU.ROOMPRICE'),
-            icon: 'price_change',
-            path: '../pages/administration/room-prices',
-          },
-          {
-            title: this.translate.instant('MENU.PAYMENTMETHOD'),
-            icon: 'credit_card',
-            path: '../pages/administration/payment-methods',
-          },
-          {
-            title: this.translate.instant('MENU.ENTRYPRODUCTS'),
-            icon: 'local_shipping',
-            path: '../pages/administration/entry-products',
           },
         ];
       }
