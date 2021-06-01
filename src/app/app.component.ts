@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { LiquidacionService } from './services/EntityServices/liquidacion.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 export class AppComponent {
   title = 'sangular';
 
-  constructor() {}
+  constructor(private liquidacionService: LiquidacionService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.liquidacionService.getAll().subscribe((res) => {
+      console.log(res);
+    });
+  }
 }
