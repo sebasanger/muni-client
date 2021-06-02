@@ -11,21 +11,33 @@ export class NgrxDataToastService {
     actions$
       .pipe(ofEntityOp(EntityOp.SAVE_ADD_ONE_SUCCESS))
       .subscribe((action) => {
-        Swal.fire('Success', action.payload.entityName + ' save', 'success');
+        Swal.fire(
+          'Se guardo exitosamente',
+          action.payload.entityName + ' guardado',
+          'success'
+        );
       });
 
     //On save ERROR one entity
     actions$
       .pipe(ofEntityOp(EntityOp.SAVE_ADD_ONE_ERROR))
       .subscribe((action) => {
-        Swal.fire('Error on save', action.payload.data.error.message, 'error');
+        Swal.fire(
+          'Error al guardar',
+          action.payload.data.error.message,
+          'error'
+        );
       });
 
     //On update SUCCESS one entity
     actions$
       .pipe(ofEntityOp(EntityOp.SAVE_UPDATE_ONE_SUCCESS))
       .subscribe((action) => {
-        Swal.fire('Success', action.payload.entityName + ' updated', 'success');
+        Swal.fire(
+          'Se actualizo exitosamente',
+          action.payload.entityName + ' actualizado',
+          'success'
+        );
       });
 
     //On update ERROR one entity
@@ -33,7 +45,7 @@ export class NgrxDataToastService {
       .pipe(ofEntityOp(EntityOp.SAVE_UPDATE_ONE_ERROR))
       .subscribe((action) => {
         Swal.fire(
-          'Error on update',
+          'Error al actuializar',
           action.payload.data.error.message,
           'error'
         );
@@ -41,14 +53,22 @@ export class NgrxDataToastService {
 
     //On get all ERROR entity
     actions$.pipe(ofEntityOp(EntityOp.QUERY_ALL_ERROR)).subscribe((action) => {
-      Swal.fire('Error get the data', action.payload.entityName, 'error');
+      Swal.fire(
+        'Error al obtener informacion',
+        action.payload.entityName,
+        'error'
+      );
     });
 
     //On delete SUCCESS entity
     actions$
       .pipe(ofEntityOp(EntityOp.SAVE_DELETE_ONE_SUCCESS))
       .subscribe((action) => {
-        Swal.fire('Success', action.payload.entityName + ' deleted', 'success');
+        Swal.fire(
+          'Exito al eliminar',
+          action.payload.entityName + ' eliminado',
+          'success'
+        );
       });
 
     //On delete ERROR entity
@@ -56,7 +76,7 @@ export class NgrxDataToastService {
       .pipe(ofEntityOp(EntityOp.SAVE_DELETE_ONE_ERROR))
       .subscribe((action) => {
         Swal.fire(
-          action.payload.entityName + ' not deleted',
+          action.payload.entityName + ' no se elimino',
           action.payload.data.error.message,
           'error'
         );

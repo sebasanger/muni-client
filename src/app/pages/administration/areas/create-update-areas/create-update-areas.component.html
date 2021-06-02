@@ -1,0 +1,40 @@
+<form [formGroup]="areaForm" novalidate (ngSubmit)="onSubmit()">
+  <div class="form-extras">
+    <div class="header-extras">
+      <mat-card-header>
+        <mat-card-title class="title-extras">{{ data.title }}</mat-card-title>
+      </mat-card-header>
+    </div>
+    <div class="content-extras">
+      <mat-card-content>
+        <div class="row-extras">
+          <div class="col-extras">
+            <mat-form-field class="full-width">
+              <input color="primary" matInput placeholder="{{ 'AREAS.AREA' | translate }}" formControlName="area">
+              <mat-error *ngIf="areaForm.controls['area'].hasError('required')">
+                {{ 'AREAS.AREA' | translate }} <strong>{{ 'REQUIRED' | translate }}</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row-extras">
+          <div class="col-extras">
+            <mat-form-field class="full-width">
+              <input color="primary" matInput placeholder="{{ 'AREAS.CODIGO' | translate }}" formControlName="codigo">
+              <mat-error *ngIf="areaForm.controls['codigo'].hasError('required')">
+                {{ 'AREAS.CODIGO' | translate }} <strong>{{ 'REQUIRED' | translate }}</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+        </div>
+      </mat-card-content>
+    </div>
+    <div class="actions-extras">
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit">{{ 'SAVE' | translate }}</button>
+      </mat-card-actions>
+    </div>
+  </div>
+
+</form>

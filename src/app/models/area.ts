@@ -1,3 +1,3 @@
 export class Area {
-  constructor(public area: string, public codigo: string, public id?: number) {}
+  constructor(public id: number, public area: string, public codigo: string) {}
 }

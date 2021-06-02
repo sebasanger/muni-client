@@ -63,17 +63,29 @@ export class NavigationComponent implements OnInit {
       ];
 
       if (this.user.roles.includes('ADMIN')) {
-        this.menuItems.push({
-          title: this.translate.instant('MENU.USERS'),
-          icon: 'people',
-          path: '../pages/users',
-        });
-
-        this.adminMenuItems = [
+        this.menuItems.push(
           {
             title: this.translate.instant('MENU.USERS'),
             icon: 'people',
             path: '../pages/users',
+          },
+          {
+            title: this.translate.instant('MENU.LIQUIDACIONES'),
+            icon: 'chrome_reader_mode',
+            path: '../pages/liquidaciones',
+          }
+        );
+
+        this.adminMenuItems = [
+          {
+            title: this.translate.instant('MENU.TIPOSLIQUIDACIONES'),
+            icon: 'view_list',
+            path: '../pages/administration/tiposliquidaciones',
+          },
+          {
+            title: this.translate.instant('MENU.AREAS'),
+            icon: 'streetview',
+            path: '../pages/administration/areas',
           },
         ];
       }

@@ -1,3 +1,3 @@
 export class TipoLiquidacion {
-  constructor(public tipo: string, public id?: number) {}
+  constructor(public id: number, public tipo: string) {}
 }

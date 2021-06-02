@@ -27,20 +27,10 @@
     "CHARTS": "Graficos",
     "USERS": "Usuarios",
     "ADMINISTRATION": "Administracion",
-    "REASON": "Razones",
-    "CATEGORY": "Categorias",
-    "BRAND": "Marcas",
-    "INVOICE": "Tipos de factura",
-    "ROOMPRICE": "Precios habitaciones",
-    "PAYMENTMETHOD": "Metodos de pagos",
-    "PRODUCTS": "Productos",
-    "CUSTOMERS": "Clientes",
-    "ENTRYPRODUCTS": "Entrada de productos",
-    "ROOMS": "Habitaciones",
-    "REGISTERS": "Cajas",
-    "STAYS": "Estadias",
-    "PAYMENTS": "Pagos",
-    "CONSUMPTIONS": "Consumiciones"
+    "LIQUIDACIONES": "Liquidaciones",
+    "AREAS": "Areas",
+    "CONCEPTOS": "Cocneptos",
+    "TIPOSLIQUIDACIONES": "Tipo de liquidaciones"
   },
   "DASHBOARD": {
     "TITLE": "Inicio"
@@ -84,5 +74,19 @@
     "STATUS": "Estado",
     "ENABLE": "Activo",
     "DISABLED": "Inactivo"
+  },
+  "LIQUIDACIONES": {
+    "LIQUIDACIONES": "Liquidaciones",
+    "LIQUIDACION": "Liquidacion",
+    "TIPOLIQUIDACION": "Tipo de liquidacion"
+  },
+  "TIPOSLIQUIDACIONES": {
+    "TIPOSLIQUIDACIONES": "Tipos de liquidaciones",
+    "TIPOLIQUIDACION": "Tipo de liquidacion"
+  },
+  "AREAS": {
+    "AREAS": "Areas",
+    "AREA": "Area",
+    "CODIGO": "Codigo"
   }
 }

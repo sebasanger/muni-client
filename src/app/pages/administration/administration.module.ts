@@ -13,8 +13,18 @@ import { MatCardModule } from '@angular/material/card';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AdministrationRouting } from './administration.routing';
+import { TipoLiquidacionesComponent } from './tipo-liquidaciones/tipo-liquidaciones.component';
+import { CreateUpdateTipoLiquidacionComponent } from './tipo-liquidaciones/create-update-tipo-liquidacion/create-update-tipo-liquidacion.component';
+import { AreasComponent } from './areas/areas.component';
+import { CreateUpdateAreasComponent } from './areas/create-update-areas/create-update-areas.component';
 @NgModule({
-  declarations: [AdministrationComponent],
+  declarations: [
+    AdministrationComponent,
+    TipoLiquidacionesComponent,
+    CreateUpdateTipoLiquidacionComponent,
+    AreasComponent,
+    CreateUpdateAreasComponent,
+  ],
   imports: [
     AdministrationRouting,
     CommonModule,

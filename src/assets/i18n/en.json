@@ -27,20 +27,10 @@
     "CHARTS": "Charts",
     "USERS": "Users",
     "ADMINISTRATION": "Administration",
-    "REASON": "Reasons",
-    "CATEGORY": "Categories",
-    "BRAND": "Brands",
-    "INVOICE": "Invoices types",
-    "ROOMPRICE": "Room prices",
-    "PAYMENTMETHOD": "Payment method",
-    "PRODUCTS": "Products",
-    "CUSTOMERS": "Customers",
-    "ENTRYPRODUCTS": "Entry products",
-    "ROOMS": "Rooms",
-    "REGISTERS": "Registers",
-    "STAYS": "Stays",
-    "PAYMENTS": "Payments",
-    "CONSUMPTIONS": "Consumtions"
+    "LIQUIDACIONES": "Liquidations",
+    "AREAS": "Areas",
+    "CONCEPTOS": "Concepts",
+    "TIPOSLIQUIDACIONES": "Liquidation types"
   },
   "LOGIN": {
     "TITLE": "Login",
@@ -81,6 +71,19 @@
     "STATUS": "Status",
     "ENABLE": "Enabled",
     "DISABLED": "Disabled"
+  },
+  "LIQUIDACIONES": {
+    "LIQUIDACIONES": "Liquidations",
+    "LIQUIDACION": "Liquidation",
+    "TIPOLIQUIDACION": "Liquidation type"
+  },
+  "TIPOSLIQUIDACIONES": {
+    "TIPOSLIQUIDACIONES": "Liquidations types",
+    "TIPOLIQUIDACION": "Liquidation type"
+  },
+  "AREAS": {
+    "AREAS": "Areas",
+    "AREA": "Area",
+    "CODIGO": "Code"
   }
-
 }
