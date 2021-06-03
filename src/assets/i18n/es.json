@@ -76,9 +76,22 @@
     "DISABLED": "Inactivo"
   },
   "LIQUIDACIONES": {
+    "ADD": "Agregar liquidacion",
     "LIQUIDACIONES": "Liquidaciones",
     "LIQUIDACION": "Liquidacion",
-    "TIPOLIQUIDACION": "Tipo de liquidacion"
+    "TIPOLIQUIDACION": "Tipo de liquidacion",
+    "USERNAME": "Propietario",
+    "PERIODO": "Periodo",
+    "AREA": "Area",
+    "FECHAINGRESO": "Fecha de ingreso",
+    "SECCION": "Seccion",
+    "NUMERORECIBO": "Numero de recibo",
+    "TOTALREMUNERACIONSINAPORTES": "remuneracion sin portes",
+    "TOTALREMUNERACIONCONAPORTES": "Remuneracion con aportes",
+    "DEDUCCIONES": "Deducciones",
+    "TOTALCOBRAR": "Total a cobrar",
+    "CREATEDAT": "Fecha de creacion",
+    "UPDATEDAT": "Fecha de actualizacion"
   },
   "TIPOSLIQUIDACIONES": {
     "TIPOSLIQUIDACIONES": "Tipos de liquidaciones",

@@ -6,6 +6,7 @@ import { UpdateAcountComponent } from './update-acount/update-acount.component';
 import { ChartsComponent } from './charts/charts.component';
 import { AdministrationComponent } from './administration/administration.component';
 import { AdminGuard } from '../guards/admin.guard';
+import { LiquidacionesComponent } from './liquidaciones/liquidaciones.component';
 
 const routes: Routes = [
   {
@@ -31,7 +32,6 @@ const routes: Routes = [
         loadChildren: () =>
           import('./users/users.module').then((m) => m.UsersModule),
       },
-
       {
         path: 'administration',
         canActivate: [AdminGuard],
@@ -39,6 +39,14 @@ const routes: Routes = [
         loadChildren: () =>
           import('./administration/administration.module').then(
             (m) => m.AdministrationModule
+          ),
+      },
+      {
+        path: 'liquidaciones',
+        component: LiquidacionesComponent,
+        loadChildren: () =>
+          import('./liquidaciones/liquidaciones.module').then(
+            (m) => m.LiquidacionesModule
           ),
       },
       {

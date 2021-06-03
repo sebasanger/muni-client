@@ -1,17 +1,21 @@
 import { User } from 'src/app/models/user.model';
 
-export interface GetPaginatedCustomers {
+export interface GetPaginatedLiquidaciones {
   content: [
     {
       id: number;
-      active: boolean;
-      balance: number;
-      closeMount: number;
-      openMount: number;
-      closeTime: Date;
+      user: User;
+      area: string;
+      fechaIngreso: Date;
+      periodo: Date;
+      seccion: string;
+      numeroRecibo: number;
+      totalRemuneracionConAportes: number;
+      totalRemuneracionSinAportes: number;
+      deducciones: number;
+      totalCobrar: number;
       createdAt: Date;
       updatedAt: Date;
-      user: User;
     }
   ];
   pageable: {

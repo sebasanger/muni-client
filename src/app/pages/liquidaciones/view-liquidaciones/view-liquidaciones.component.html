@@ -1,0 +1,94 @@
+<div class="head">
+  <div>
+    <button mat-raised-button color="accent" (click)="addNewLiquidacion()" class="add-button">
+      {{ 'LIQUIDACIONES.ADD' | translate }}
+    </button>
+  </div>
+  <div>
+    <mat-form-field class="filter">
+      <input matInput placeholder="{{ 'FILTER' | translate }}"
+        (keyup)="filterSubject.next($any($event.target).value)" />
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="example-container mat-elevation-z8 animate__animated animate__fadeIn animate__delay-0.4s">
+  <mat-table matSort matSortActive="id" matSortDirection="asc" matSortDisableClear [dataSource]="dataSource">
+
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="id"> {{row.id}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="user.fullName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONES.USERNAME' | translate }} </mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="Name"> {{row.user.fullName }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="periodo">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONES.PERIODO' | translate }} </mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="periodo"> {{row.periodo | date:'dd/MM/yyyy'}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="tipoLiquidacion.tipo">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONES.TIPOLIQUIDACION' | translate }}
+      </mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="Tipo de liquidacion"> {{row.tipoLiquidacion.tipo }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="totalRemuneracionConAportes">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONES.TOTALREMUNERACIONCONAPORTES' | translate }}
+      </mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="Total remuneracion c/a"> {{row.totalRemuneracionConAportes }}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="totalRemuneracionSinAportes">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONES.TOTALREMUNERACIONSINAPORTES' | translate }}
+      </mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="Total remuneracion s/a"> {{row.totalRemuneracionSinAportes}}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="deducciones">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONES.DEDUCCIONES' | translate }}
+      </mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="Deducciones"> {{row.deducciones }} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="totalCobrar">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONES.TOTALCOBRAR' | translate }}
+      </mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="Total a cobrar"> {{row.totalCobrar}} </mat-cell>
+    </ng-container>
+
+
+    <!-- delete Column -->
+    <ng-container matColumnDef="edit">
+      <mat-header-cell *matHeaderCellDef class="no-sort"> {{ 'EDIT' | translate }} </mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="edit">
+        <button mat-icon-button color="accent" (click)="editLiquidacion(row.id)">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <!-- delete Column -->
+    <ng-container matColumnDef="delete">
+      <mat-header-cell *matHeaderCellDef class="no-sort"> {{ 'DELETE' | translate }} </mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="delete">
+        <button mat-icon-button color="warn" (click)="deleteLiquidacion(row.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onRowClicked(row)"> </mat-row>
+
+  </mat-table>
+
+  <mat-paginator #paginator [length]="totalElements" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[5, 8, 10, 15]">
+  </mat-paginator>
+</div>

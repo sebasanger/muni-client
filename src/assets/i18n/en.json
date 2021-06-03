@@ -73,9 +73,22 @@
     "DISABLED": "Disabled"
   },
   "LIQUIDACIONES": {
+    "ADD": "Add new liquidation",
     "LIQUIDACIONES": "Liquidations",
     "LIQUIDACION": "Liquidation",
-    "TIPOLIQUIDACION": "Liquidation type"
+    "TIPOLIQUIDACION": "Liquidation type",
+    "USERNAME": "Owner",
+    "PERIODO": "Period",
+    "AREA": "Area",
+    "FECHAINGRESO": "Entry date",
+    "SECCION": "Section",
+    "NUMERORECIBO": "Receipt number",
+    "TOTALREMUNERACIONSINAPORTES": "Remuneration with contributions ",
+    "TOTALREMUNERACIONCONAPORTES": "Remuneration without contributions",
+    "DEDUCCIONES": "Deductions",
+    "TOTALCOBRAR": "Total receivable",
+    "CREATEDAT": "Created at",
+    "UPDATEDAT": "Updated at"
   },
   "TIPOSLIQUIDACIONES": {
     "TIPOSLIQUIDACIONES": "Liquidations types",
