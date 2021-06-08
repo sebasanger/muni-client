@@ -74,6 +74,7 @@
   },
   "LIQUIDACIONES": {
     "ADD": "Add new liquidation",
+    "USER": "Owner",
     "LIQUIDACIONES": "Liquidations",
     "LIQUIDACION": "Liquidation",
     "TIPOLIQUIDACION": "Liquidation type",
@@ -98,5 +99,12 @@
     "AREAS": "Areas",
     "AREA": "Area",
     "CODIGO": "Code"
+  },
+  "LIQUIDACIONESCONCEPTOS": {
+    "CONCEPTOS": "Concepts",
+    "DESCRIPCION": "Description",
+    "CANTIDAD": "Amount",
+    "IMPROTE": "Price",
+    "SUBTOTAL": "Sub"
   }
 }

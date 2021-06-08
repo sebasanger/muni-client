@@ -77,6 +77,7 @@
   },
   "LIQUIDACIONES": {
     "ADD": "Agregar liquidacion",
+    "USER": "Propietario",
     "LIQUIDACIONES": "Liquidaciones",
     "LIQUIDACION": "Liquidacion",
     "TIPOLIQUIDACION": "Tipo de liquidacion",
@@ -101,5 +102,12 @@
     "AREAS": "Areas",
     "AREA": "Area",
     "CODIGO": "Codigo"
+  },
+  "LIQUIDACIONESCONCEPTOS": {
+    "CONCEPTOS": "Conceptos",
+    "DESCRIPCION": "Descripcion",
+    "CANTIDAD": "Cantidad",
+    "IMPROTE": "Importe",
+    "SUBTOTAL": "Subtotal"
   }
 }

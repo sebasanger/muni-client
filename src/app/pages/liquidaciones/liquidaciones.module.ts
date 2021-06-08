@@ -18,12 +18,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { ConceptosListComponent } from './liquidacion-details/conceptos-list/conceptos-list.component';
+import { MatTabsModule } from '@angular/material/tabs';
 @NgModule({
   declarations: [
     LiquidacionesComponent,
     ViewLiquidacionesComponent,
     CreateUpdateLiquidacionComponent,
     LiquidacionDetailsComponent,
+    ConceptosListComponent,
   ],
   imports: [
     CommonModule,
@@ -40,6 +43,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     ReactiveFormsModule,
     FlexLayoutModule,
     MatDatepickerModule,
+    MatTabsModule,
     MatNativeDateModule,
   ],
 })

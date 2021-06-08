@@ -4,7 +4,7 @@ import { User } from './user.model';
 
 export class Liquidacion {
   constructor(
-    public liquidacionConcepto: LiquidacionConcepto,
+    public liquidacionConceptos: LiquidacionConcepto[],
     public area: string,
     public createdAt: Date,
     public deducciones: number,
