@@ -105,6 +105,7 @@
     "DESCRIPCION": "Description",
     "CANTIDAD": "Amount",
     "IMPROTE": "Price",
-    "SUBTOTAL": "Sub"
+    "SUBTOTAL": "Sub",
+    "TIPO": "Concept type"
   }
 }

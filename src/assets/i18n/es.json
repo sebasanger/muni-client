@@ -108,6 +108,7 @@
     "DESCRIPCION": "Descripcion",
     "CANTIDAD": "Cantidad",
     "IMPROTE": "Importe",
-    "SUBTOTAL": "Subtotal"
+    "SUBTOTAL": "Subtotal",
+    "TIPO": "Tipo de concepto"
   }
 }

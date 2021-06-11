@@ -1,10 +1,11 @@
 <section>
-  <div class="grid-container animate__animated animate__fadeIn animate__delay-0.4s">
-    <mat-grid-list [cols]="cols" rowHeight="550px">
-      <mat-grid-tile>
+  <div class="grid-container register-details animate__animated animate__fadeIn animate__delay-0.4s">
+    <mat-tab-group mat-align-tabs="start" class="register-tabs">
+      <mat-tab label="Liquidacion">
         <mat-card *ngIf="liquidacion != null">
           <mat-card-header>
-            <mat-card-title> {{ 'LIQUIDACIONES.USER' | translate}}: {{ liquidacion.user.fullName }}</mat-card-title>
+            <mat-card-title> {{ 'LIQUIDACIONES.USER' | translate}}: {{ liquidacion.user.fullName | slice:0:20}}
+            </mat-card-title>
             <mat-card-subtitle> {{ 'LIQUIDACIONES.PERIODO' | translate}}: {{liquidacion.periodo | date:'dd/MM/yyyy'}}
             </mat-card-subtitle>
           </mat-card-header>
@@ -49,26 +50,24 @@
             </button>
           </mat-card-actions>
         </mat-card>
-      </mat-grid-tile>
-
-      <mat-grid-tile>
-
-        <mat-tab-group class="tabs-extras">
-
-          <mat-tab *ngIf="liquidacionConcepto && liquidacionConcepto.length > 0"
-            label="{{ 'LIQUIDACIONESCONCEPTOS.CONCEPTOS' | translate}}">
-            <div>
-              <app-conceptos-list [liquidacionConcepto]="liquidacionConcepto"></app-conceptos-list>
-            </div>
-
-          </mat-tab>
+      </mat-tab>
+    </mat-tab-group>
 
 
-        </mat-tab-group>
 
-      </mat-grid-tile>
+    <mat-tab-group class="tabs-extras">
+
+      <mat-tab *ngIf="liquidacionConcepto && liquidacionConcepto.length > 0"
+        label="{{ 'LIQUIDACIONESCONCEPTOS.CONCEPTOS' | translate}}">
+        <div>
+          <app-conceptos-list [liquidacionConcepto]="liquidacionConcepto"></app-conceptos-list>
+        </div>
+
+      </mat-tab>
 
 
-    </mat-grid-list>
+    </mat-tab-group>
+
+
   </div>
 </section>

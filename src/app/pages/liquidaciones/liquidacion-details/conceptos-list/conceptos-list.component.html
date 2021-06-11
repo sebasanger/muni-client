@@ -1,47 +1,60 @@
 <div class="container">
   <div class="mat-elevation-z8">
-    <table class="table" mat-table matSortActive="amount" matSortDirection="asc" [dataSource]="dataSource" matSort>
+    <mat-table class="table" matSortActive="amount" matSortDirection="asc" [dataSource]="dataSource" matSort>
 
       <!-- amount Column -->
       <ng-container matColumnDef="descripcion">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONESCONCEPTOS.DESCRIPCION' | translate }}
-        </th>
-        <td mat-cell *matCellDef="let row"> {{row.concepto.descripcion}} </td>
+        <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONESCONCEPTOS.DESCRIPCION' | translate }}
+        </mat-header-cell>
+        <mat-cell data-label="Descripcion" *matCellDef="let row"> {{row.concepto.descripcion}} </mat-cell>
       </ng-container>
 
-      <!-- Method Column -->
+      <!-- Memat-header-cellod Column -->
       <ng-container matColumnDef="importe">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONESCONCEPTOS.IMPROTE' | translate }} </th>
-        <td mat-cell *matCellDef="let row"> {{row.importe}} </td>
+        <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONESCONCEPTOS.IMPROTE' | translate }}
+        </mat-header-cell>
+        <mat-cell data-label="Importe" *matCellDef="let row"> {{row.importe}} </mat-cell>
       </ng-container>
 
-      <!-- Method Column -->
+      <!-- Memat-header-cellod Column -->
       <ng-container matColumnDef="cantidad">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONESCONCEPTOS.CANTIDAD' | translate }} </th>
-        <td mat-cell *matCellDef="let row"> {{row.cantidad}} </td>
+        <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONESCONCEPTOS.CANTIDAD' | translate }}
+        </mat-header-cell>
+        <mat-cell data-label="Cantidad" *matCellDef="let row"> {{row.cantidad}} </mat-cell>
       </ng-container>
 
-      <!-- Method Column -->
+
+      <!-- tipoConcepto Column -->
+      <ng-container matColumnDef="concepto.tipoConcepto">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONESCONCEPTOS.TIPO' | translate }}
+        </mat-header-cell>
+        <mat-cell data-label="Tipo de concepto" *matCellDef="let row"> {{row.concepto.tipoConcepto | lowercase}}
+        </mat-cell>
+      </ng-container>
+
+      <!-- Memat-header-cellod Column -->
       <ng-container matColumnDef="subtotal">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONESCONCEPTOS.SUBTOTAL' | translate }} </th>
-        <td mat-cell *matCellDef="let row"> {{row.subtotal }} </td>
+        <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONESCONCEPTOS.SUBTOTAL' | translate }}
+        </mat-header-cell>
+        <mat-cell data-label="Subtotal" *matCellDef="let row"> {{row.subtotal }} </mat-cell>
       </ng-container>
 
       <!-- delete Column -->
       <ng-container matColumnDef="delete">
-        <th class="delete-extras" mat-header-cell *matHeaderCellDef> {{ 'DELETE' | translate }} </th>
-        <td class="delete-extras" mat-cell *matCellDef="let row">
+        <mat-header-cell class="delete-extras no-sort" *matHeaderCellDef> {{ 'DELETE' | translate }} </mat-header-cell>
+        <mat-cell data-label="Eliminar" class="delete-extras" *matCellDef="let row">
           <button mat-icon-button color="warn" (click)="delete(row)">
             <mat-icon>delete</mat-icon>
           </button>
-        </td>
+        </mat-cell>
       </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 
 
-    </table>
+    </mat-table>
 
     <mat-paginator [pageSizeOptions]="[5, 10,15]"></mat-paginator>
   </div>

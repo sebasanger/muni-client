@@ -24,6 +24,7 @@ export class ConceptosListComponent implements OnInit {
   displayedColumns: string[] = [
     'descripcion',
     'importe',
+    'concepto.tipoConcepto',
     'cantidad',
     'subtotal',
     'delete',
@@ -35,8 +36,10 @@ export class ConceptosListComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource(this.liquidacionConcepto);
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+    setTimeout(() => {
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    }, 500);
   }
 
   delete(concepto: Concepto) {
