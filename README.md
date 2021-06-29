@@ -1,6 +1,6 @@
 # muni
 
-### Hotel project client with Angular 11.0.4 using angular material, scss, redux(ngrx), rxjs, etc.
+### Muni project client with Angular 11.0.4 using angular material, scss, redux(ngrx), rxjs, etc., based on my proejct sprintel-santel
 
 ## Live preview: https://segasa-muni.web.app/
 
