@@ -20,9 +20,9 @@
       <mat-cell *matCellDef="let row" data-label="id"> {{row.id}} </mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="user.fullName">
+    <ng-container matColumnDef="legajo">
       <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONES.USERNAME' | translate }} </mat-header-cell>
-      <mat-cell *matCellDef="let row" data-label="Name"> {{row.user.fullName }} </mat-cell>
+      <mat-cell *matCellDef="let row" data-label="Name"> {{row.legajo }} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="periodo">
@@ -33,7 +33,9 @@
     <ng-container matColumnDef="tipoLiquidacion.tipo">
       <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONES.TIPOLIQUIDACION' | translate }}
       </mat-header-cell>
-      <mat-cell *matCellDef="let row" data-label="Tipo de liquidacion"> {{row.tipoLiquidacion.tipo }} </mat-cell>
+      <mat-cell *matCellDef="let row" data-label="Tipo de liquidacion">
+        <p *ngIf="row.tipoLiquidacion">{{row.tipoLiquidacion.tipo }} </p>
+      </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="totalRemuneracionConAportes">

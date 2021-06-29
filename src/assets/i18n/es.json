@@ -76,7 +76,8 @@
     "DISABLED": "Inactivo"
   },
   "LIQUIDACIONES": {
-    "ADD": "Agregar liquidacion",
+    "ADD": "Nueva liquidacion",
+    "UPDATE": "Actualizar liquidacion",
     "USER": "Propietario",
     "LIQUIDACIONES": "Liquidaciones",
     "LIQUIDACION": "Liquidacion",
@@ -105,6 +106,8 @@
   },
   "LIQUIDACIONESCONCEPTOS": {
     "CONCEPTOS": "Conceptos",
+    "ADDTITLE": "Agregar concepto",
+    "CONCEPTO": "Concepto",
     "DESCRIPCION": "Descripcion",
     "CANTIDAD": "Cantidad",
     "IMPROTE": "Importe",

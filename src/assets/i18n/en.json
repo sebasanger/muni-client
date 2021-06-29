@@ -74,6 +74,7 @@
   },
   "LIQUIDACIONES": {
     "ADD": "Add new liquidation",
+    "UPDATE": "Update liquidation",
     "USER": "Owner",
     "LIQUIDACIONES": "Liquidations",
     "LIQUIDACION": "Liquidation",

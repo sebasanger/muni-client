@@ -20,10 +20,7 @@
       <ng-container matColumnDef="cantidad">
         <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONESCONCEPTOS.CANTIDAD' | translate }}
         </mat-header-cell>
-        <mat-cell data-label="Cantidad" *matCellDef="let row">
-          <span *ngIf="row.cantidad == 0">1</span>
-          <span *ngIf="row.cantidad > 0">{{row.cantidad}}</span>
-        </mat-cell>
+        <mat-cell data-label="Cantidad" *matCellDef="let row"> {{row.cantidad}} </mat-cell>
       </ng-container>
 
 

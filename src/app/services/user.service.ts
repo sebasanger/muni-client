@@ -1,5 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import {
+  EntityCollectionServiceBase,
+  EntityCollectionServiceElementsFactory,
+} from '@ngrx/data';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { UpdateAcountPayload } from '../interfaces/user/form-update-acount-payload';
@@ -13,7 +17,12 @@ const base_url = environment.base_url;
   providedIn: 'root',
 })
 export class UserService {
+  entities$: Observable<User[]>;
   constructor(private http: HttpClient) {}
+
+  getAll() {
+    this.entities$ = this.http.get<any>(`${base_url}user`);
+  }
 
   getAllUsers(
     filter: string,

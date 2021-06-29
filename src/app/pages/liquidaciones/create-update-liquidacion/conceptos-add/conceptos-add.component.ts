@@ -12,11 +12,11 @@ import { TipoLiquidacionService } from 'src/app/services/EntityServices/tipo-liq
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'app-create-update-liquidacion',
-  templateUrl: './create-update-liquidacion.component.html',
-  styleUrls: ['./create-update-liquidacion.component.scss'],
+  selector: 'app-conceptos-add',
+  templateUrl: './conceptos-add.component.html',
+  styleUrls: ['./conceptos-add.component.scss'],
 })
-export class CreateUpdateLiquidacionComponent implements OnInit {
+export class ConceptosAddComponent implements OnInit {
   public liquidacionId: number;
   private ngUnsubscribe: Subject<boolean> = new Subject();
   public liquidacion: Liquidacion;

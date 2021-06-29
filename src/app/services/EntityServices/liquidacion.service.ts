@@ -6,6 +6,7 @@ import {
 } from '@ngrx/data';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { CreateUpdateLiquidacionPayload } from 'src/app/interfaces/liquidaciones/CreateUpdateLiquidacion';
 import { GetPaginatedLiquidaciones } from 'src/app/interfaces/liquidaciones/get-paginated-liquidaciones';
 import { Liquidacion } from 'src/app/models/liquidacion';
 import { selectPaginatedLiquidaciones } from 'src/app/store/liquidacion/customer.selectors';
@@ -27,6 +28,20 @@ export class LiquidacionService extends EntityCollectionServiceBase<Liquidacion>
 
     this.paginatedLiquidaciones$ = this.liquidacionStore.pipe(
       select(selectPaginatedLiquidaciones)
+    );
+  }
+
+  createLiquidacion(createLiquidacionPayload: CreateUpdateLiquidacionPayload) {
+    return this.http.post<any>(
+      `${base_url}liquidacion/save`,
+      createLiquidacionPayload
+    );
+  }
+
+  updateLiquidacion(updateLiquidacionPayload: CreateUpdateLiquidacionPayload) {
+    return this.http.put<any>(
+      `${base_url}liquidacion/update`,
+      updateLiquidacionPayload
     );
   }
 

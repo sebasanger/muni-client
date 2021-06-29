@@ -20,6 +20,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ConceptosListComponent } from './liquidacion-details/conceptos-list/conceptos-list.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { ConceptosAddComponent } from './create-update-liquidacion/conceptos-add/conceptos-add.component';
+import { ListConceptosComponent } from './create-update-liquidacion/list-conceptos/list-conceptos.component';
 @NgModule({
   declarations: [
     LiquidacionesComponent,
@@ -27,6 +29,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     CreateUpdateLiquidacionComponent,
     LiquidacionDetailsComponent,
     ConceptosListComponent,
+    ConceptosAddComponent,
+    ListConceptosComponent,
   ],
   imports: [
     CommonModule,

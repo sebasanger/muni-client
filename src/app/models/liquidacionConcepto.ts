@@ -1,5 +1,4 @@
 import { Concepto } from './concepto';
-import { Liquidacion } from './liquidacion';
 
 export class LiquidacionConcepto {
   constructor(

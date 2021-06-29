@@ -4,28 +4,25 @@
       <mat-tab label="Liquidacion">
         <mat-card *ngIf="liquidacion != null">
           <mat-card-header>
-            <mat-card-title> {{ 'LIQUIDACIONES.USER' | translate}}: {{ liquidacion.user.fullName | slice:0:20}}
+            <mat-card-title> Legajo: {{ liquidacion.legajo }}
             </mat-card-title>
             <mat-card-subtitle> {{ 'LIQUIDACIONES.PERIODO' | translate}}: {{liquidacion.periodo | date:'dd/MM/yyyy'}}
             </mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
-            <p>
+            <p *ngIf="liquidacion.area">
               {{ 'LIQUIDACIONES.AREA' | translate}}: {{liquidacion.area }}
             </p>
-            <p>
-              {{ 'LIQUIDACIONES.DEDUCCIONES' | translate}}: {{liquidacion.deducciones }}
-            </p>
-            <p>
+            <p *ngIf="liquidacion.numeroRecibo">
               {{ 'LIQUIDACIONES.NUMERORECIBO' | translate}}: {{liquidacion.numeroRecibo }}
             </p>
-            <p>
+            <p *ngIf="liquidacion.area">
               {{ 'LIQUIDACIONES.CREATEDAT' | translate}}: {{liquidacion.createdAt | date:'hh:mm dd/MM/yyyy' }}
             </p>
-            <p>
+            <p *ngIf="liquidacion.seccion">
               {{ 'LIQUIDACIONES.SECCION' | translate}}: {{liquidacion.seccion }}
             </p>
-            <p>
+            <p *ngIf="liquidacion.tipoLiquidacion">
               {{ 'LIQUIDACIONES.TIPOLIQUIDACION' | translate}}: {{liquidacion.tipoLiquidacion.tipo }}
             </p>
             <p>

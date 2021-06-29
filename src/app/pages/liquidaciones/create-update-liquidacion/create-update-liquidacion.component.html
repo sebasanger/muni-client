@@ -1,1 +1,63 @@
-<p>create-update-liquidacion works!</p>
+<form [formGroup]="liquidacionForm" novalidate (ngSubmit)="onSubmit()" fxLayout="column">
+  <mat-card class="shipping-card animate__animated animate__fadeIn animate__delay-0.4s">
+    <mat-card-header>
+      <mat-card-title *ngIf="liquidacionId != null">{{ 'LIQUIDACIONES.UPDATE' | translate }}</mat-card-title>
+      <mat-card-title *ngIf="liquidacionId == null">{{ 'LIQUIDACIONES.ADD' | translate }}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="row">
+
+        <mat-form-field class="full-width">
+          <mat-label>{{ 'LIQUIDACIONES.USER' | translate }}</mat-label>
+          <mat-select formControlName="user">
+            <mat-option [value]="option.id" *ngFor="let option of users$ | async">{{ option.fullName }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="liquidacionForm.controls['user'].hasError('required')">
+            {{ 'LIQUIDACIONES.USER' | translate }} <strong>{{ 'REQUIRED' | translate }}</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label>{{ 'LIQUIDACIONES.TIPOLIQUIDACION' | translate }}</mat-label>
+          <mat-select formControlName="tipoLiquidacion">
+            <mat-option [value]="option.id" *ngFor="let option of tipoLiquidaciones$ | async">{{ option.tipo }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="liquidacionForm.controls['tipoLiquidacion'].hasError('required')">
+            {{ 'LIQUIDACIONES.TIPOLIQUIDACION' | translate }} <strong>{{ 'REQUIRED' | translate }}</strong>
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+
+      <div class="row">
+        <mat-form-field appearance="fill">
+          <mat-label>Month and Year</mat-label>
+          <input matInput [matDatepicker]="dp" formControlName="periodo">
+          <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+          <mat-datepicker #dp startView="multi-year" panelClass="example-month-picker">
+          </mat-datepicker>
+        </mat-form-field>
+
+
+        <mat-form-field>
+          <input matInput placeholder="{{ 'LIQUIDACIONES.SECCION' | translate }}" type="text"
+            formControlName="seccion" />
+          <mat-error *ngIf="liquidacionForm.controls['seccion'].hasError('required')">
+            {{ 'LIQUIDACIONES.SECCION' | translate }}<strong> {{ 'REQUIRED' | translate }}</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit">{{ 'SAVE' | translate }}</button>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+</form>
+
+<app-conceptos-add></app-conceptos-add>
+
+<app-list-conceptos></app-list-conceptos>

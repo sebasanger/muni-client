@@ -35,7 +35,7 @@ export class ViewLiquidacionesComponent implements OnInit {
   public filter: string = '';
   public displayedColumns = [
     'id',
-    'user.fullName',
+    'legajo',
     'periodo',
     'tipoLiquidacion.tipo',
     'totalRemuneracionConAportes',

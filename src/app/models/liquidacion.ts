@@ -10,6 +10,7 @@ export class Liquidacion {
     public deducciones: number,
     public fechaIngreso: Date,
     public numeroRecibo: number,
+    public legajo: number,
     public periodo: Date,
     public seccion: string,
     public totalNoRemunerativo: number,
