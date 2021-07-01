@@ -2,6 +2,7 @@
   <div class="mat-elevation-z8">
     <mat-table class="table" matSortActive="amount" matSortDirection="asc" [dataSource]="dataSource" matSort>
 
+
       <!-- amount Column -->
       <ng-container matColumnDef="descripcion">
         <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONESCONCEPTOS.DESCRIPCION' | translate }}
@@ -13,7 +14,7 @@
       <ng-container matColumnDef="importe">
         <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONESCONCEPTOS.IMPROTE' | translate }}
         </mat-header-cell>
-        <mat-cell data-label="Importe" *matCellDef="let row"> {{row.importe}} </mat-cell>
+        <mat-cell data-label="Importe" *matCellDef="let row"> {{row.importe | currency}} </mat-cell>
       </ng-container>
 
       <!-- Memat-header-cellod Column -->
@@ -39,18 +40,10 @@
       <ng-container matColumnDef="subtotal">
         <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONESCONCEPTOS.SUBTOTAL' | translate }}
         </mat-header-cell>
-        <mat-cell data-label="Subtotal" *matCellDef="let row"> {{row.subtotal }} </mat-cell>
+        <mat-cell data-label="Subtotal" *matCellDef="let row"> {{row.subtotal | currency }} </mat-cell>
       </ng-container>
 
-      <!-- delete Column -->
-      <ng-container matColumnDef="delete">
-        <mat-header-cell class="delete-extras no-sort" *matHeaderCellDef> {{ 'DELETE' | translate }} </mat-header-cell>
-        <mat-cell data-label="Eliminar" class="delete-extras" *matCellDef="let row">
-          <button mat-icon-button color="warn" (click)="delete(row)">
-            <mat-icon>delete</mat-icon>
-          </button>
-        </mat-cell>
-      </ng-container>
+
 
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

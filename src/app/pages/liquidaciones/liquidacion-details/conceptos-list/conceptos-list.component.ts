@@ -27,7 +27,6 @@ export class ConceptosListComponent implements OnInit {
     'concepto.tipoConcepto',
     'cantidad',
     'subtotal',
-    'delete',
   ];
 
   constructor(
@@ -40,23 +39,5 @@ export class ConceptosListComponent implements OnInit {
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     }, 500);
-  }
-
-  delete(concepto: Concepto) {
-    Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
-    }).then((result: any) => {
-      if (result.isConfirmed) {
-        this.liquidacionConceptoService.delete(concepto.id);
-      } else {
-        Swal.fire('Cancelled', 'The concepto is safe', 'success');
-      }
-    });
   }
 }

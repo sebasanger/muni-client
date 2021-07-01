@@ -34,35 +34,35 @@
       <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONES.TIPOLIQUIDACION' | translate }}
       </mat-header-cell>
       <mat-cell *matCellDef="let row" data-label="Tipo de liquidacion">
-        <p *ngIf="row.tipoLiquidacion">{{row.tipoLiquidacion.tipo }} </p>
+        <p *ngIf="row.tipoLiquidacion">{{row.tipoLiquidacion  | lowercase }} </p>
       </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="totalRemuneracionConAportes">
       <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONES.TOTALNOREMUNERATIVO' | translate }}
       </mat-header-cell>
-      <mat-cell *matCellDef="let row" data-label="Total remuneracion c/a"> {{row.total }}
+      <mat-cell *matCellDef="let row" data-label="Total remuneracion c/a"> {{row.totalNoRemunerativo | currency }}
       </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="totalRemuneracionSinAportes">
       <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONES.TOTALREMUNERATIVO' | translate }}
       </mat-header-cell>
-      <mat-cell *matCellDef="let row" data-label="Total remuneracion s/a"> {{row.totalRemunerativo}}
+      <mat-cell *matCellDef="let row" data-label="Total remuneracion s/a"> {{row.totalRemunerativo | currency}}
       </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="deducciones">
       <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONES.TOTALDEDUCCIONES' | translate }}
       </mat-header-cell>
-      <mat-cell *matCellDef="let row" data-label="Deducciones"> {{row.totalNoRemunerativo }} </mat-cell>
+      <mat-cell *matCellDef="let row" data-label="Deducciones"> {{row.totalDeducciones | currency }} </mat-cell>
     </ng-container>
 
 
     <ng-container matColumnDef="totalCobrar">
       <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'LIQUIDACIONES.TOTAL' | translate }}
       </mat-header-cell>
-      <mat-cell *matCellDef="let row" data-label="Total a cobrar"> {{row.total}} </mat-cell>
+      <mat-cell *matCellDef="let row" data-label="Total a cobrar"> {{row.total | currency}} </mat-cell>
     </ng-container>
 
 

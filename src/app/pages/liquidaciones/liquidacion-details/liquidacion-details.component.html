@@ -26,30 +26,23 @@
               {{ 'LIQUIDACIONES.TIPOLIQUIDACION' | translate}}: {{liquidacion.tipoLiquidacion.tipo }}
             </p>
             <p>
-              {{ 'LIQUIDACIONES.TOTAL' | translate}}: {{liquidacion.total }}
+              {{ 'LIQUIDACIONES.TOTAL' | translate}}: {{liquidacion.total | currency}}
             </p>
             <p>
               {{ 'LIQUIDACIONES.TOTALREMUNERATIVO' | translate}}:
-              {{liquidacion.totalRemunerativo }}
+              {{liquidacion.totalRemunerativo | currency}}
             </p>
             <p>
               {{ 'LIQUIDACIONES.TOTALNOREMUNERATIVO' | translate}}:
-              {{liquidacion.totalNoRemunerativo }}
+              {{liquidacion.totalNoRemunerativo | currency }}
             </p>
             <p>
               {{ 'LIQUIDACIONES.TOTALDEDUCCIONES' | translate}}:
-              {{liquidacion.totalDeducciones }}
+              {{liquidacion.totalDeducciones | currency }}
             </p>
 
           </mat-card-content>
-          <mat-card-actions>
-            <button mat-icon-button color="accent" (click)="editLiquidacion(liquidacion.id)">
-              <mat-icon>edit</mat-icon>
-            </button>
-            <button mat-icon-button color="warn" (click)="deleteLiquidacion(liquidacion.id)">
-              <mat-icon>delete</mat-icon>
-            </button>
-          </mat-card-actions>
+
         </mat-card>
       </mat-tab>
     </mat-tab-group>
