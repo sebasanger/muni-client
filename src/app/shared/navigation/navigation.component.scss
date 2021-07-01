@@ -78,9 +78,16 @@
 .selectors {
   display: flex;
   flex-direction: row;
-  width: 100px;
+  width: 120px;
+  margin-left: 15px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.selectors {
+  padding-top: 10px;
+  margin-right: 5px;
+  cursor: pointer;
 }
 
 .easter-egg {
@@ -94,4 +101,8 @@
 
 .easter-egg mat-icon {
   padding: 3px;
+}
+
+.select {
+  width: 40px;
 }

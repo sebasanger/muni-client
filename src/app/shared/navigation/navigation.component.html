@@ -42,8 +42,14 @@
 
       <span class="title" routerLink="dashboard">{{ title }}</span>
       <div class="selectors">
-        <app-theme-picker></app-theme-picker>
-        <app-lang-selector></app-lang-selector>
+        <app-theme-picker class="select"></app-theme-picker>
+        <app-lang-selector class="select"></app-lang-selector>
+        <button mat-menu-item class="select" (click)="openUploadModal()"
+          *ngIf="user != null && user.roles.includes('ADMIN')">
+          <mat-icon>
+            upload
+          </mat-icon>
+        </button>
       </div>
       <span class="easter-egg">The<mat-icon>cake</mat-icon>is a lie</span>
 

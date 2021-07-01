@@ -20,8 +20,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { AdministrationModule } from './administration/administration.module';
 import { PagesRoutingModule } from './pages.routing';
 import { UsersModule } from './users/users.module';
+import { ImportacionComponent } from './importacion/importacion.component';
 @NgModule({
-  declarations: [PagesComponent, DashboardComponent, ChartsComponent],
+  declarations: [PagesComponent, DashboardComponent, ChartsComponent, ImportacionComponent],
   exports: [PagesComponent, DashboardComponent, ChartsComponent],
   imports: [
     PagesRoutingModule,

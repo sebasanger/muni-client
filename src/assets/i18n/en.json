@@ -108,5 +108,9 @@
     "IMPROTE": "Price",
     "SUBTOTAL": "Sub",
     "TIPO": "Concept type"
+  },
+  "IMPORTACION": {
+    "FILE": "File",
+    "TITULO": "Import CSV"
   }
 }

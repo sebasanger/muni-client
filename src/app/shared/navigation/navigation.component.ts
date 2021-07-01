@@ -9,6 +9,8 @@ import { Title } from '@angular/platform-browser';
 import { environment } from 'src/environments/environment';
 import { MenuItem } from 'src/app/interfaces/ui/menu.interface';
 import { TranslateService } from '@ngx-translate/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ImportacionComponent } from 'src/app/pages/importacion/importacion.component';
 
 const page_title: string = environment.page_title;
 @Component({
@@ -24,6 +26,7 @@ export class NavigationComponent implements OnInit {
   public title = page_title;
   public actualTitle: string;
   constructor(
+    public dialog: MatDialog,
     private breakpointObserver: BreakpointObserver,
     private authStore: Store<{ auth: any }>,
     private titleService: Title,
@@ -99,6 +102,13 @@ export class NavigationComponent implements OnInit {
 
   logout() {
     this.authStore.dispatch(apiUserAuthLogout());
+  }
+
+  openUploadModal() {
+    this.dialog.open(ImportacionComponent, {
+      width: '600px',
+      height: '400px',
+    });
   }
 
   isHandset$: Observable<boolean> = this.breakpointObserver

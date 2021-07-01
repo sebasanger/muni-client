@@ -1,0 +1,23 @@
+<div class="form-extras">
+  <div class="header-extras">
+    <mat-card-header>
+      <mat-card-title class="title-extras">{{ 'IMPORTACION.TITULO' | translate }}</mat-card-title>
+    </mat-card-header>
+  </div>
+  <div class="content-extras">
+    <mat-card-content>
+      <div class="row-extras">
+        <div class="col-extras">
+          <input required (change)="csvInputChange($event)" type="file" color="primary"
+            placeholder="{{ 'IMPORTACION.FILE' | translate }}" accept=".csv">
+
+        </div>
+      </div>
+    </mat-card-content>
+  </div>
+  <div class="actions-extras">
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="save()">{{ 'SAVE' | translate }}</button>
+    </mat-card-actions>
+  </div>
+</div>

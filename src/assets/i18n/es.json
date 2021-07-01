@@ -113,5 +113,9 @@
     "IMPROTE": "Importe",
     "SUBTOTAL": "Subtotal",
     "TIPO": "Tipo de concepto"
+  },
+  "IMPORTACION": {
+    "FILE": "Archivo CSV",
+    "TITULO": "Importar liquidaciones desde CSV"
   }
 }
