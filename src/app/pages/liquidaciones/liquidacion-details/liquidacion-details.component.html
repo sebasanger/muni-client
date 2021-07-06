@@ -13,32 +13,70 @@
             <p *ngIf="liquidacion.area">
               {{ 'LIQUIDACIONES.AREA' | translate}}: {{liquidacion.area }}
             </p>
-            <p *ngIf="liquidacion.numeroRecibo">
-              {{ 'LIQUIDACIONES.NUMERORECIBO' | translate}}: {{liquidacion.numeroRecibo }}
+
+            <p *ngIf="liquidacion.categoria">
+              {{ 'LIQUIDACIONES.CATEGORIA' | translate}}: {{liquidacion.categoria }}
             </p>
-            <p *ngIf="liquidacion.area">
-              {{ 'LIQUIDACIONES.CREATEDAT' | translate}}: {{liquidacion.createdAt | date:'hh:mm dd/MM/yyyy' }}
-            </p>
+
             <p *ngIf="liquidacion.seccion">
               {{ 'LIQUIDACIONES.SECCION' | translate}}: {{liquidacion.seccion }}
             </p>
-            <p *ngIf="liquidacion.tipoLiquidacion">
-              {{ 'LIQUIDACIONES.TIPOLIQUIDACION' | translate}}: {{liquidacion.tipoLiquidacion.tipo }}
+
+            <p *ngIf="liquidacion.numeroCuenta">
+              {{ 'LIQUIDACIONES.NUMEROCUENTA' | translate}}: {{liquidacion.numeroCuenta }}
             </p>
+
+            <p *ngIf="liquidacion.fechaIngreso">
+              {{ 'LIQUIDACIONES.FECHAINGRESO' | translate}}: {{liquidacion.fechaIngreso | date:'dd/MM/yyyy' }}
+            </p>
+
+            <p *ngIf="liquidacion.createdAt">
+              {{ 'LIQUIDACIONES.CREATEDAT' | translate}}: {{liquidacion.createdAt | date:'hh:mm dd/MM/yyyy' }}
+            </p>
+
+            <p *ngIf="liquidacion.periodo">
+              {{ 'LIQUIDACIONES.PERIODO' | translate}}: {{liquidacion.periodo | date:'MMMM/yyyy' }}
+            </p>
+
+            <p *ngIf="liquidacion.tipoContratacion">
+              {{ 'LIQUIDACIONES.TIPOCONTRATACION' | translate}}: {{liquidacion.tipoContratacion }}
+            </p>
+
+            <p *ngIf="liquidacion.tipoLiquidacion">
+              {{ 'LIQUIDACIONES.TIPOLIQUIDACION' | translate}}: {{liquidacion.tipoLiquidacion  | lowercase }}
+            </p>
+
             <p>
               {{ 'LIQUIDACIONES.TOTAL' | translate}}: {{liquidacion.total | currency}}
             </p>
+
             <p>
               {{ 'LIQUIDACIONES.TOTALREMUNERATIVO' | translate}}:
               {{liquidacion.totalRemunerativo | currency}}
             </p>
+
             <p>
               {{ 'LIQUIDACIONES.TOTALNOREMUNERATIVO' | translate}}:
               {{liquidacion.totalNoRemunerativo | currency }}
             </p>
+
             <p>
               {{ 'LIQUIDACIONES.TOTALDEDUCCIONES' | translate}}:
               {{liquidacion.totalDeducciones | currency }}
+            </p>
+
+            <p *ngIf="liquidacion.user">
+              Id propietario:{{liquidacion.user.id }}
+            </p>
+
+            <p *ngIf="liquidacion.user?.fullName">
+              {{ 'USERS.FULLNAME' | translate}}:
+              {{liquidacion.user.fullName }}
+            </p>
+
+            <p *ngIf="liquidacion.user?.cuil">
+              {{ 'USERS.CUIL' | translate}}:
+              {{liquidacion.user.cuil }}
             </p>
 
           </mat-card-content>

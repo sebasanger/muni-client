@@ -8,16 +8,22 @@
     <mat-card-content>
       <div class="row-extras">
         <div class="col-extras">
-          <input required (change)="csvInputChange($event)" type="file" color="primary"
-            placeholder="{{ 'IMPORTACION.FILE' | translate }}" accept=".csv">
+          <label>{{ 'IMPORTACION.CONCEPTOS' | translate }}</label>
+          <input required (change)="selectConceptos($event)" type="file" color="primary" accept=".csv">
+        </div>
+      </div>
 
+      <div class="row-extras">
+        <div class="col-extras">
+          <label>{{ 'IMPORTACION.MAESTRO' | translate }}</label>
+          <input required (change)="selectMaestro($event)" type="file" color="primary" accept=".csv">
         </div>
       </div>
     </mat-card-content>
   </div>
   <div class="actions-extras">
     <mat-card-actions>
-      <button mat-raised-button color="primary" (click)="save()">{{ 'SAVE' | translate }}</button>
+      <button mat-raised-button color="primary" (click)="save()">{{ 'IMPORTACION.IMPORTAR' | translate }}</button>
     </mat-card-actions>
   </div>
 </div>

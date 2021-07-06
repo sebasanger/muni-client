@@ -62,6 +62,8 @@
       "FILTER": "Filter by name or email...",
       "ADD": "Add user"
     },
+
+    "CUIL": "Cuil",
     "FULLNAME": "Full name",
     "ROLES": "Roles",
     "EMAIL": "Email",
@@ -90,7 +92,9 @@
     "TOTALDEDUCCIONES": "Deductions",
     "TOTAL": "Total",
     "CREATEDAT": "Created at",
-    "UPDATEDAT": "Updated at"
+    "UPDATEDAT": "Updated at",
+    "NUMEROCUENTA": "Acount number",
+    "CATEGORIA": "Category"
   },
   "TIPOSLIQUIDACIONES": {
     "TIPOSLIQUIDACIONES": "Liquidations types",
@@ -110,7 +114,9 @@
     "TIPO": "Concept type"
   },
   "IMPORTACION": {
-    "FILE": "File",
-    "TITULO": "Import CSV"
+    "MAESTRO": "CSV Master",
+    "CONCEPTOS": "Csv Concepts",
+    "TITULO": "Import CSV",
+    "IMPORTAR": "Import"
   }
 }

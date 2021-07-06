@@ -9,9 +9,10 @@ const base_url = environment.base_url;
 export class ImportacionService {
   constructor(private http: HttpClient) {}
 
-  importarLiquidaciones(file: File) {
+  importarLiquidaciones(conceptos: File, maestro: File) {
     const formData = new FormData();
-    formData.append('file', file);
+    formData.append('conceptos', conceptos);
+    formData.append('maestro', maestro);
     return this.http.post<any>(
       `${base_url}importacion/uploadLiquidaciones`,
       formData

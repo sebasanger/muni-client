@@ -10,7 +10,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./importacion.component.scss'],
 })
 export class ImportacionComponent {
-  private file: File;
+  private conceptos: File;
+  private maestro: File;
   constructor(
     private fb: FormBuilder,
     public dialogRef: MatDialogRef<ImportacionComponent>,
@@ -18,22 +19,34 @@ export class ImportacionComponent {
   ) {}
 
   save() {
-    this.importacionService.importarLiquidaciones(this.file).subscribe(
-      (err) => {
-        Swal.fire('Error en la importacion', err, 'error');
-      },
-      (success) => {
-        Swal.fire(
-          'Importacion exitosa',
-          'La importacion de las liquidaciones se realizo con exito',
-          'success'
-        );
-        this.dialogRef.close();
-      }
-    );
+    this.importacionService
+      .importarLiquidaciones(this.conceptos, this.maestro)
+      .subscribe(
+        () => {
+          Swal.fire(
+            'Importacion exitosa',
+            'La importacion de las liquidaciones se realizo con exito',
+            'success'
+          );
+
+          this.dialogRef.close();
+          setTimeout(() => {
+            window.location.reload();
+          }, 3000);
+        },
+        (err) => {
+          console.log(err);
+
+          Swal.fire('Error en la importacion', err, 'error');
+        }
+      );
   }
 
-  csvInputChange(fileInputEvent: any) {
-    this.file = fileInputEvent.target.files[0];
+  selectConceptos(fileInputEvent: any) {
+    this.conceptos = fileInputEvent.target.files[0];
+  }
+
+  selectMaestro(fileInputEvent: any) {
+    this.maestro = fileInputEvent.target.files[0];
   }
 }

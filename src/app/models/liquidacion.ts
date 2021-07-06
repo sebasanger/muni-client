@@ -9,7 +9,6 @@ export class Liquidacion {
     public createdAt: Date,
     public deducciones: number,
     public fechaIngreso: Date,
-    public numeroRecibo: number,
     public legajo: number,
     public periodo: Date,
     public seccion: string,
@@ -18,7 +17,14 @@ export class Liquidacion {
     public totalRemunerativo: number,
     public total: number,
     public updatedAt: Date,
-    public tipoLiquidacion: TipoLiquidacion,
+    public tipoLiquidacion:
+      | 'SUELDO'
+      | 'AGUINALDO'
+      | 'HORAS_EXTRAS'
+      | 'AYUDA_ESCOLAR',
+    public tipoContratacion: 'PLANTA_PERMANENTE' | 'CONTRATADO',
+    public categoria: string,
+    public numeroCuenta: string,
     public user: User,
     public id?: number
   ) {}

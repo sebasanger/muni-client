@@ -71,6 +71,7 @@
     "USERNAME": "Nombre de usuario",
     "LASTPASSWORDCHANGE": "Ultimo cambio de contraseña",
     "CREATEDAT": "Fecha de creacion",
+    "CUIL": "Cuil",
     "STATUS": "Estado",
     "ENABLE": "Activo",
     "DISABLED": "Inactivo"
@@ -93,7 +94,9 @@
     "TOTALDEDUCCIONES": "Total de deducciones",
     "TOTAL": "Total",
     "CREATEDAT": "Fecha de creacion",
-    "UPDATEDAT": "Fecha de actualizacion"
+    "UPDATEDAT": "Fecha de actualizacion",
+    "NUMEROCUENTA": "Numero de cuenta",
+    "CATEGORIA": "Categoria"
   },
   "TIPOSLIQUIDACIONES": {
     "TIPOSLIQUIDACIONES": "Tipos de liquidaciones",
@@ -115,7 +118,9 @@
     "TIPO": "Tipo de concepto"
   },
   "IMPORTACION": {
-    "FILE": "Archivo CSV",
-    "TITULO": "Importar liquidaciones desde CSV"
+    "MAESTRO": "Csv de maestro",
+    "CONCEPTOS": "Csv de conceptos",
+    "TITULO": "Importar liquidaciones desde CSV",
+    "IMPORTAR": "Importar"
   }
 }

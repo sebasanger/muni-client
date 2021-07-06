@@ -63,9 +63,6 @@ export class ConceptosAddComponent implements OnInit {
       this.liquidacionId = liquidacion.id;
       this.liquidacion = liquidacion;
       this.liquidacionForm.controls['user'].setValue(liquidacion.user);
-      this.liquidacionForm.controls['tipoLiquidacion'].setValue(
-        liquidacion.tipoLiquidacion.id
-      );
       this.liquidacionForm.controls['periodo'].setValue(liquidacion.periodo);
       this.liquidacionForm.controls['seccion'].setValue(liquidacion.seccion);
     }
